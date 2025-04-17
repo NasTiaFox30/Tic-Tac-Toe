@@ -108,5 +108,25 @@ public class TicTacToe {
         }
         return true;
     }
+    
+    public static void restartGame(){
+        scan.nextLine();
+        while(true){
+            System.out.print("Do you want to play one more time? (Y/N): ");
+            String decision = scan.nextLine().trim().toUpperCase();
+
+            if (decision.equals("Y")){
+                restart = true;
+                break;
+            } else if(decision.equals("N")){
+                restart = false;
+                System.out.println("Thanks for game!)");
+                break;
+            }
+            else {
+                continue;
+            }
+        }
+    }
 }
 
