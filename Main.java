@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-         while (TicTacToe.getRestart()) {
+
+        while (TicTacToe.getRestart()) {
             //Create empty table
             TicTacToe.createBoard();
             TicTacToe.printBoard();
