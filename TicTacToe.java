@@ -72,7 +72,7 @@ public class TicTacToe {
             row = random.nextInt(3);
             col = random.nextInt(3);
         } while (!isValidMove(row, col));
-        System.out.println("Комп'ютер зробив хід на " + (row + 1) + ", " + (col + 1));
+        System.out.println("Computer moved on: " + (row + 1) + ", " + (col + 1));
         board[row][col] = COMPUTER;
     }
 
@@ -119,6 +119,7 @@ public class TicTacToe {
 
             if (decision.equals("Y")){
                 restart = true;
+                ClearConsole.clear();
                 break;
             } else if(decision.equals("N")){
                 restart = false;
