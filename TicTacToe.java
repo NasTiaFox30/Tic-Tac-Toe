@@ -10,5 +10,16 @@ public class TicTacToe {
     private static Scanner scan = new Scanner(System.in);
     private static Random random = new Random();
     private static boolean restart = true;
-
+    
+    //    GET|SET
+    public static char getPLAYER(){
+        return PLAYER;
+    }
+    public static char getComputer(){
+        return COMPUTER;
+    }
+    public static boolean getRestart(){
+        return restart;
+    }
 }
+
