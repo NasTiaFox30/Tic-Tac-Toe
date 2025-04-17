@@ -28,7 +28,7 @@ public class Main {
                     break;
                 }
             }
-            
+            TicTacToe.restartGame();
         }
     }
 }
