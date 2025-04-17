@@ -21,7 +21,7 @@ public class Main {
                 TicTacToe.computerTurn();
                 TicTacToe.printBoard();
                 if (TicTacToe.isWin(TicTacToe.getComputer())) {
-                    System.out.println("Computer WIN!");
+                    System.out.println("You LOSE! - Computer WINS");
                     break;
                 } else if (TicTacToe.isBoardFull()) {
                     System.out.println("Tie!");
