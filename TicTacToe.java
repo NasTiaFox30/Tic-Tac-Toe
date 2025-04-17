@@ -10,7 +10,7 @@ public class TicTacToe {
     private static Scanner scan = new Scanner(System.in);
     private static Random random = new Random();
     private static boolean restart = true;
-    
+
     //    GET|SET
     public static char getPLAYER(){
         return PLAYER;
@@ -21,7 +21,7 @@ public class TicTacToe {
     public static boolean getRestart(){
         return restart;
     }
-    
+
     public static void createBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -41,7 +41,7 @@ public class TicTacToe {
             System.out.println("-------------");
         }
     }
-    
+    //User move
     public static void playerTurn() {
         int row, col;
         do {
@@ -75,7 +75,8 @@ public class TicTacToe {
         System.out.println("Комп'ютер зробив хід на " + (row + 1) + ", " + (col + 1));
         board[row][col] = COMPUTER;
     }
-    
+
+    //Check for WIN
     public static boolean isWin(char symbol) {
         // Check rows and columns
         for (int i = 0; i < 3; i++) {
@@ -94,7 +95,7 @@ public class TicTacToe {
             return true;
         }
 
-//        if there is no win:
+        //if there is no win:
         return false;
     }
 
@@ -108,7 +109,8 @@ public class TicTacToe {
         }
         return true;
     }
-    
+
+    //Restart game
     public static void restartGame(){
         scan.nextLine();
         while(true){
@@ -129,4 +131,3 @@ public class TicTacToe {
         }
     }
 }
-
