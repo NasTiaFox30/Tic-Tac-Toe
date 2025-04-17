@@ -75,5 +75,38 @@ public class TicTacToe {
         System.out.println("Комп'ютер зробив хід на " + (row + 1) + ", " + (col + 1));
         board[row][col] = COMPUTER;
     }
+    
+    public static boolean isWin(char symbol) {
+        // Check rows and columns
+        for (int i = 0; i < 3; i++) {
+            if (board[i][0] == symbol && board[i][1] == symbol && board[i][2] == symbol) {
+                return true;
+            }
+            if (board[0][i] == symbol && board[1][i] == symbol && board[2][i] == symbol) {
+                return true;
+            }
+        }
+        // Check diagonals
+        if (board[0][0] == symbol && board[1][1] == symbol && board[2][2] == symbol) {
+            return true;
+        }
+        if (board[0][2] == symbol && board[1][1] == symbol && board[2][0] == symbol) {
+            return true;
+        }
+
+//        if there is no win:
+        return false;
+    }
+
+    public static boolean isBoardFull() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == EMPTY) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
 
